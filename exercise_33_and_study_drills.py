@@ -1,16 +1,22 @@
-numbers_list = [] # Defined an empty list called numbers_list.
-index = 0 # The index is defined to 0.
+numbers_list = []
 
-while index < 6: # The while loop repeatedly executes unlit the index be less than six. 
-    print "At the top index is %d" % index # Frist indented line, string with formatting syntax for print each integer of index.
-    numbers_list.append(index) # Use append method to add to numbers_list each integers from index.
+def while_loop(top_limit): # Convert the while loop in a function.
+    index = 0 # Index now is indented as par of the function.
+    while index < top_limit: # Now the top_limit is a variable
+        print "At the top index is %d" % index
+        numbers_list.append(index)
 
-    index = index + 1 # Increment index in one.
-    print "Numbers now: ", numbers_list # Print plaint text and numbers_list until be less than six.
-    print "At the bottom index is %d" % index # String for print the increment of index with formatiting syntax.
+        index = index + 1
+        print "Number now:", numbers_list
+        print "At the bottom index is %d" % index
 
+print "What should the top limit be?" # Print plain text.
+top_limit = raw_input(">") # top_limit will be the integer that the user has entered in the prompt.
+top_limit = int(top_limit) # Convert the input into a integer.
 
-print "The numbers: " # Print plain text
+while_loop(top_limit) #Call the function.
 
-for numbers in numbers_list: # For loop for iterating each integer of number_list.
-     print numbers # Print each one of te integers in numbers_list.
+print "The numbers: "
+
+for numbers in numbers_list:
+     print numbers
