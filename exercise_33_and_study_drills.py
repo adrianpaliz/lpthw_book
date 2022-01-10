@@ -1,24 +1,23 @@
 numbers_list = []
+top_limit = range(6) # top_limit now use range() function for create a sequence of numbers from 0 to 6
 
-def while_loop(top_limit, increment): # The function now has two arguments.
+def for_loop(top_limit, increment): # Now the function is a for loop with two arguments.
     index = 0
-    while index < top_limit:
+    for integers in top_limit: # For loop for iterating each integer of the range.
+        index < top_limit
         print "At the top index is %d" % index
         numbers_list.append(index)
 
-        index = index + increment # The variable increment will be added to index.
+        index = index + increment 
         print "Number now:", numbers_list
         print "At the bottom index is %d" % index
 
-print "What should the top limit be?"
-top_limit = raw_input(">")
-top_limit = int(top_limit)
 
-print "What should the increment be?" # Print plain text.
-increment = raw_input(">") # increment will be the integer that the user has entered in the prompt.
-increment = int(increment) # Convert the input into a integer
+print "What should the increment be?"
+increment = raw_input(">")
+increment = int(increment)
 
-while_loop(top_limit, increment) # Call the while_ loop function
+for_loop(top_limit, increment) #Call the for_loop function.
 
 print "The numbers: "
 
