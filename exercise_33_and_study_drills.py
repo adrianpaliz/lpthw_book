@@ -1,20 +1,24 @@
 numbers_list = []
 
-def while_loop(top_limit): # Convert the while loop in a function.
-    index = 0 # Index now is indented as par of the function.
-    while index < top_limit: # Now the top_limit is a variable
+def while_loop(top_limit, increment): # The function now has two arguments.
+    index = 0
+    while index < top_limit:
         print "At the top index is %d" % index
         numbers_list.append(index)
 
-        index = index + 1
+        index = index + increment # The variable increment will be added to index.
         print "Number now:", numbers_list
         print "At the bottom index is %d" % index
 
-print "What should the top limit be?" # Print plain text.
-top_limit = raw_input(">") # top_limit will be the integer that the user has entered in the prompt.
-top_limit = int(top_limit) # Convert the input into a integer.
+print "What should the top limit be?"
+top_limit = raw_input(">")
+top_limit = int(top_limit)
 
-while_loop(top_limit) #Call the function.
+print "What should the increment be?" # Print plain text.
+increment = raw_input(">") # increment will be the integer that the user has entered in the prompt.
+increment = int(increment) # Convert the input into a integer
+
+while_loop(top_limit, increment) # Call the while_ loop function
 
 print "The numbers: "
 
